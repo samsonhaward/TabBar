@@ -1,116 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Bootstrap 5 responsive Tabs with Accordion</title>
-
-    <meta name="description"
-        content="Simple way to create responsive tabs in Bootstrap 5. Tabs functionality are replaced width Accordion on small screens." />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <style>
-        .responsive-tabs {
-            padding: 1rem;
-        }
-
-        .responsive-tabs .nav-tabs {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .responsive-tabs .nav-tabs {
-                display: flex;
-            }
-
-            .responsive-tabs .card {
-                border: none;
-            }
-
-            .responsive-tabs .card .card-header {
-                display: none;
-            }
-
-            .responsive-tabs .card .collapse {
-                display: block;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .responsive-tabs .tab-pane {
-                display: block !important;
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container responsive-tabs">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a id="tab-A" href="#pane-A" class="nav-link active" data-bs-toggle="tab" role="tab">–A–</a>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+        
+        <!-- Code by Angela Delise  
+       https://codepen.io/angeladelise/pen/wvzRNzw?editors=1100 -->
+       
+      
+      </head>
+      <link rel="stylesheet" href="style.scss">
+      
+      <body>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__listlogo">
+              <svg viewBox="0 0 640 512" width="100" title="infinity">
+                <path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z" />
+              </svg>
             </li>
-            <li class="nav-item">
-                <a id="tab-B" href="#pane-B" class="nav-link" data-bs-toggle="tab" role="tab">–B–</a>
+            <li class="nav__listitem">About
+              <ul class="nav__listitemdrop">
+                <li>Team</li>
+                <li>Our Process</li>
+                <li>History</li>
+              </ul>
             </li>
-            <li class="nav-item">
-                <a id="tab-C" href="#pane-C" class="nav-link" data-bs-toggle="tab" role="tab">–C–</a>
+            <li class="nav__listitem">Work
+              <ul class="nav__listitemdrop">
+                <li>Portfolio</li>
+                <li>Showcase</li>
+              </ul>
             </li>
-        </ul>
-
-        <div id="content" class="tab-content" role="tablist">
-            <div id="pane-A" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
-                <div class="card-header" role="tab" id="heading-A">
-                    <h5 class="mb-0">
-                        <a data-bs-toggle="collapse" href="#collapse-A" aria-expanded="true" aria-controls="collapse-A">
-                            Collapsible Group Item A
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapse-A" class="collapse show" data-bs-parent="#content" role="tabpanel"
-                    aria-labelledby="heading-A">
-                    <div class="card-body">[Tab content A]</div>
-                </div>
-            </div>
-
-            <div id="pane-B" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
-                <div class="card-header" role="tab" id="heading-B">
-                    <h5 class="mb-0">
-                        <a class="collapsed" data-bs-toggle="collapse" href="#collapse-B" aria-expanded="false"
-                            aria-controls="collapse-B">
-                            Collapsible Group Item B
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapse-B" class="collapse" data-bs-parent="#content" role="tabpanel"
-                    aria-labelledby="heading-B">
-                    <div class="card-body">[Tab content B]</div>
-                </div>
-            </div>
-
-            <div id="pane-C" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
-                <div class="card-header" role="tab" id="heading-C">
-                    <h5 class="mb-0">
-                        <a data-bs-toggle="collapse" href="#collapse-C" aria-expanded="true" aria-controls="collapse-C">
-                            Collapsible Group Item C
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapse-C" class="collapse" data-bs-parent="#content" role="tabpanel"
-                    aria-labelledby="heading-C">
-                    <div class="card-body">[Tab content C]</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-</body>
+            <li class="nav__listitem">Contact</li>
+          </ul>
+        </nav>
+      </body>
+      
+      <!-- 
+      
+      -->
 
 </html>
