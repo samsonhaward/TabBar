@@ -60,8 +60,20 @@ html, body{
     cursor: pointer;
 }
 
-.icon:hover{
+.icon::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
     background-color: var(--primary-color);
+    transform: scale(0, 1);
+    transition: 0.5s ease;
+}
+
+.icon:hover::after{
+    transform: scale(1, 1);
 }
 #show{
     display: none;
@@ -97,6 +109,7 @@ html, body{
 #showsSingle{
     display: flex;
     height: 100%;
+    padding: 5px;
     background-color: var(--darkmode); 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
@@ -170,6 +183,7 @@ html, body{
     background-color: var(--darkmode);
     width: 100%;
     height: 350px;
+    border-radius: 3px;
     padding: 5px 10px 1px;
     color: var(--text-color);
 }
@@ -186,6 +200,7 @@ html, body{
     background-color: var(--darkmode);
     width: 100%;
     height: 350px;
+    border-radius: 3px;
     padding: 5px 10px 1px;
     color: var(--text-color);
 }
@@ -203,6 +218,7 @@ html, body{
     background-color: var(--darkmode);
     width: 100%;
     height: 350px;
+    border-radius: 3px;
     padding: 5px 10px 1px;
     color: var(--text-color);
 }
@@ -220,7 +236,7 @@ html, body{
     width: 100%;
     background-color: var(--darkmodePage);
     border-radius: 3px;
-    padding: 3px;
+    padding: 3px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
