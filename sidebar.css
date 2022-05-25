@@ -6,7 +6,9 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #d4d1d1;
-    --darkmode: #272525;
+    --darkmode: #1f1e1e;
+    --darkmodePage: #0f0f0f;
+    --hover: rgb(44, 43, 43);
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -30,14 +32,19 @@ html, body{
 
 /*-----whole sidebar-------*/
 #sidebar{
-    position: relative;
     width: 60px;
     height: 100%;
     background-color: var(--darkmode);
     padding: 5px 5px 0px;
+    z-index: 1;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
 }
+
 .company_logo{
     width: 100%;
+    padding: 10px 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -52,6 +59,7 @@ html, body{
     justify-content: center;
     cursor: pointer;
 }
+
 .icon:hover{
     background-color: var(--primary-color);
 }
@@ -63,7 +71,7 @@ html, body{
     top: -5px;
     left: 50px;
     padding: 5px;
-    z-index: 1;
+    z-index: 2;
 }
 #showHelp{
     display: none;
@@ -83,22 +91,28 @@ html, body{
 }
 #shows{
     display: grid;
-    background-color: #3c3c3c; 
+    background-color: var(--darkmode); 
+    
+}
+#showsSingle{
+    display: flex;
+    height: 100%;
+    background-color: var(--darkmode); 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 }
-  #showsSingle{
-      display: flex;
-      background-color: #3c3c3c; 
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  
-  }
+#showsSingle a p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 #shows a{
     position: relative;
     text-decoration: none;
     color: var(--text-color);
     width: 100%;
-    padding: 3px;
+    padding: 3px 10px 3px;
     font-size: 15px;
 }
 
@@ -107,6 +121,7 @@ html, body{
     display: inline-block;
     padding: 5px;
     color: var(--text-color);
+    background-color: var(--hover);
     width: 100%;
     padding: 7px;
     font-size: 19px;
@@ -116,17 +131,102 @@ html, body{
     text-decoration: none;
 }
 #showsSingle p{
-    position: relative;
-    width: 100%;
+    padding-left: 10px;
     font-size: 19px;
     color: var(--text-color);
 }
 #shows a:hover{
-    background-color: var(--darkmode);
+    background-color: var(--hover);
 }
 #shows p:hover{
-    background-color: var(--darkmode);
+    background-color: var(--hover);
 }
 #showsSingle:hover{
+    background-color: var(--hover);
+}
+
+/*-----------parent Body-------------*/
+.main {
+    margin-left: 60px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    height: 100%; /* Defoult same height as screen */
+    background-color: var(--darkmodePage);
+    padding: 50px 60px 0px;
+}
+/*-----------Searchbar-------------*/
+
+#searchBar input{
+    background-color: transparent;
+    width: 100%;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    outline: none;
+    font-size: 19px;
+    color: var(--text-color);
+}
+/*-----------Esg Factors-------------*/
+.environmental{
     background-color: var(--darkmode);
+    width: 100%;
+    height: 350px;
+    padding: 5px 10px 1px;
+    color: var(--text-color);
+}
+.environmental .sectioninfo{
+    height: 290px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.sectioninfo::-webkit-scrollbar {
+    display: none;
+}
+.social{
+    background-color: var(--darkmode);
+    width: 100%;
+    height: 350px;
+    padding: 5px 10px 1px;
+    color: var(--text-color);
+}
+
+.social .sectioninfo{
+    height: 290px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.sectioninfo::-webkit-scrollbar {
+    display: none;
+}
+.governance{
+    background-color: var(--darkmode);
+    width: 100%;
+    height: 350px;
+    padding: 5px 10px 1px;
+    color: var(--text-color);
+}
+
+.governance .sectioninfo{
+    height: 290px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.sectioninfo::-webkit-scrollbar {
+    display: none;
+}
+.sectionContent{
+    width: 100%;
+    background-color: var(--darkmodePage);
+    border-radius: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.sectionContent .sectionContents{
+    display: grid;
+    grid-template-rows: 20px;
 }
