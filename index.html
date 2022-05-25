@@ -1,44 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sidebar.css">
 
-    <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
-        
-        <!-- Code by Angela Delise  
-       https://codepen.io/angeladelise/pen/wvzRNzw?editors=1100 -->
-       
-      
-      </head>
-      <link rel="stylesheet" href="style.scss">
-      
-      <body>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__listlogo">
-              <svg viewBox="0 0 640 512" width="100" title="infinity">
-                <path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z" />
-              </svg>
-            </li>
-            <li class="nav__listitem">About
-              <ul class="nav__listitemdrop">
-                <li>Team</li>
-                <li>Our Process</li>
-                <li>History</li>
-              </ul>
-            </li>
-            <li class="nav__listitem">Work
-              <ul class="nav__listitemdrop">
-                <li>Portfolio</li>
-                <li>Showcase</li>
-              </ul>
-            </li>
-            <li class="nav__listitem">Contact</li>
-          </ul>
-        </nav>
-      </body>
-      
-      <!-- 
-      
-      -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <title>UI/UX Sidebar</title>
+    
+  </head>
+  <body>
+    
+      
+  <nav id="sidebar">
+    <header>
+      <span class="company_logo">
+        <img src="https://pngimg.com/uploads/github/github_PNG7.png" alt="">
+      </span>
+    </header>
+    <main>
+      <br><br><br>
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-search"></i></a>
+        <div id="show">
+          <div id="showsSingle">
+            <a href="#">
+              <p>Search</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-fire-flame-curved"></i></a>
+        <div id="show">
+          <div id="shows">
+            <p>Dashboards</p>
+            
+            <a href="#">Esg risk rating</a>
+            <a href="#">Esg factors</a>
+            <a href="#">Esg intelligence</a>
+            <a href="#">Esg 365</a>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-plug"></i></a>
+        <div id="show">
+          <div id="showsSingle">
+            <a href="#">
+              <p>API</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-book"></i></a>
+        <div id="show">
+          <div id="shows">
+            <p>Asset Manager</p>
+            
+            <a href="#">Climate Risk</a>
+            <a href="#">Assets</a>
+            <a href="#">Impact Score</a>
+            <a href="#">Risk Score</a>
+            <a href="#">Taxanomy Score</a>
+            <a href="#">Esg Highlights</a>
+            <a href="#">Ranking</a>
+            <a href="#">Sustainability Score</a>
+            <a href="#">Credit Credits</a>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-pen"></i></a>
+        <div id="show">
+          <div id="shows">
+            <p>Esg Standards</p>
+            
+            <a href="#">Regulation</a>
+            <a href="#">Reporting</a>
+            <a href="#">Complience</a>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-school"></i></a>
+        <div id="show">
+          <div id="shows">
+            <p>Invite Users</p>
+            
+            <a href="#">Internal users</a>
+            <a href="#">External user</a>
+          
+        </div>
+        </div>
+      </div>
+
+      <div style="position:absolute; bottom: 0;left: 0;" class="icon">
+        <a href="#"><i style="color: white;" class="fa-solid fa-question"></i></a>
+        <div id="showHelp">
+          <div id="shows">
+            
+            <a href="#">Advisors</a>
+            <a href="#">Support</a>
+            <p>Help</p>
+          
+        </div>
+        </div>
+      </div>
+
+
+    </main>
+  </nav>
+      
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>
